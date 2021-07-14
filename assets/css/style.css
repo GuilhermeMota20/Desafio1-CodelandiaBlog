@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: .3rem;
+}
+
+/* Variáveis */
+:root {
+    /* colors primary */
+    --blue: #3EA1DB;
+    --blue-dark: #574AE8;
+    --white: #FFF;
+  
+    /* text color */
+    --title: #313131;
+    --text: #B6B6B6;
+    
+    /* gradient color */
+    --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+}
+
+/* basic */
+html {
+    font-family: 'Lato', sans-serif;
+    background: #e5e5e5;
+
+    scroll-behavior: smooth;
+}
+
+/* text */
+h3.logo,
+h3.blog {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--title);
+    font-size: 1.625rem;
+}
+
+p {
+    color: var(--text);
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+/* class */
+.section {
+    padding: 2.5rem 16.8rem;
+}
+
+/* HEADER ============================================================= */
+#header.container {
+    height: 15.6rem;
+    background: var(--linear);
+}
+
+#header .brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 4.5rem;
+}
+
+.search-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-search {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: .3rem 0 0 .3rem;
+    padding-left: 1.5rem;
+    padding-top: .99rem;
+    padding-bottom: 1rem;
+}
+
+.btn-search img {
+    width: 1.8rem;
+    cursor: pointer;
+}
+
+.search-blog {
+    width: 100%;
+    height: 4rem;
+
+    border: none;
+    border-radius: 0 .3rem .3rem 0;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+
+    outline: none;
+    color: var(--text);
+}
+
+/* alterando cor do placeholder em input */
+.search-blog::-webkit-input-placeholder {
+    color: var(--white);
+    opacity: 0.5;
+}
+
+/* MAIN ============================================================= */
+.card {
+    background: var(--white);
+    margin-bottom: 3.1rem;
+    padding: 1.5rem;
+
+    border-radius: .3rem;
+    border: solid 1px #3ea1db46;
+
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.01);
+}
+
+.card:first-child {
+    margin-top: 6.25rem;
+}
+
+.card header {
+    display: flex;
+    justify-content: space-between;
+
+    color: #B6B6B6;
+}
+
+.icon-heart {
+    font-size: 1.563rem;
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+.text-card {
+    margin-top: 1.25rem;
+}
+
+.text-card p {
+    margin-top: .5rem;
+}
+
+/* SHOW UP =================================================== */
+.back-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1rem;
+
+    padding: .5rem;
+    clip-path: circle();
+    line-height: 0;
+
+    background: var(--blue);
+    color: var(--white);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .3s;
+    transform: translateY(100%);
+}
+
+.back-to-top:hover {
+    background: var(--blue-dark);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active */
+
+.active {
+    color: var(--blue-dark);
+}
+
+.hide {
+    display: none;
+}
+
+/* RESPONSIVE ========================================== */
+@media screen and (max-width: 899px) {
+    .section {
+        padding: 3rem 1.25rem;
+    }
+
+    h3.logo,
+    h3.blog {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 1.125rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.625rem;
+    }
+
+    /* HEADER ========================== */
+    .btn-search {
+        padding: .65rem 0 .65rem 1.5rem;
+    }
+    
+    .btn-search img {
+        width: 0.977rem;
+    }
+    
+    .search-blog {
+        height: 2.5rem;
+    }
+
+    /* MAIN ========================== */
+    #main .section {
+        padding: .8rem 1.25rem;
+    }
+
+    .card header span {
+        font-size: 0.875rem;
+    }
+
+    .icon-heart {
+        font-size: 1.375rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .section {
+        padding: 2.5rem 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section {
+        padding: 2.5rem 16.8rem;
+    }
+}
