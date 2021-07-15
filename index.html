@@ -38,8 +38,10 @@
           </div>
 
           <input
+            id="search-bar"
             class="search-blog"
             type="search"
+            name="search-bar"
             placeholder="Pesquisar no blog..."
           />
         </div>
@@ -47,68 +49,47 @@
     </header>
 
     <main id="main" class="container">
-      <section class="section">
-        <!-- CARD 1 -->
-        <div id="card1" class="card">
-          <header>
-            <span>02 de jul, 2021</span>
-            <i class=' bx bxs-heart icon-heart'></i>
+
+      <div class="section content-btn-add">
+        <!-- button create notice -->
+        <button class="new-notice" id="addNotice">Criar feed</button>
+      </div>
+
+      <section id="root" class="section">
+
+<!--         <div id="card1" class="card">
+          <header class="card-header">
+            <span class="card-span">02 de jul, 2021</span>
+            <img class="icon-heart" src="assets/img/heartIcon.png" alt="heart">
           </header>
 
           <div class="text-card">
             <h1>Agora é oficial: o Windows 11 está vindo</h1>
-            <p>
+            <p class="card-resume">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis.
             </p>
           </div>
         </div>
-
-        <!-- CARD 2 -->
-        <div id="card2" class="card">
-          <header>
-            <span>02 de jul, 2021</span>
-            <i class='bx bxs-heart icon-heart'></i>
-          </header>
-
-          <div class="text-card">
-            <h1>Tim Berners-Lee vai leiloar código-fonte da web</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis. Praesent et auctor justo. Vestibulum nisl orci, lacinia venenatis leo sit amet, pulvinar tincidunt risus. Phasellus nisl dui, cursus a lectus et, interdum ullamcorper libero.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div id="card3" class="card">
-          <header>
-            <span>02 de jul, 2021</span>
-            <i class='bx bxs-heart icon-heart'></i>
-          </header>
-
-          <div class="text-card">
-            <h1>Tem Firefox novo no pedaço e você vai querer migrar</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est.
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div id="card4" class="card">
-          <header>
-            <span>02 de jul, 2021</span>
-            <i class='bx bxs-heart icon-heart'></i>
-          </header>
-
-          <div class="text-card">
-            <h1>John McAfee, criador do antivírus McAfee, morre</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum auctor est. Nam vitae finibus ante. Duis lobortis tellus vel diam fringilla, eu ullamcorper ex iaculis. Praesent et auctor justo. Vestibulum nisl orci, lacinia venenatis leo sit amet, pulvinar tincidunt risus. Phasellus nisl dui, cursus a lectus et, interdum ullamcorper libero.
-            </p>
-          </div>
-        </div>
+ -->
       </section>
     </main>
+
+    <!-- Modal -->
+    <div id="modal">
+      <div class="container">
+        <h3 class="modal-title">Adicionar Notícia</h3>
+
+        <form action="" class="form">
+          <label for="title">Título</label>
+          <input required type="text" name="title" id="title" placeholder="Digite o título...">
+
+          <label for="title">Resumo</label>
+          <input required type="text" name="resume" id="resume" placeholder="Digite o resumo...">
+
+          <button type="submit">Adicionar</button>
+        </form>
+      </div>
+    </div>
 
     <!-- Show up -->
     <a class="back-to-top" href="#home"><i class='bx bxs-upvote'></i></a>
