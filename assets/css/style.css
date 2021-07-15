@@ -175,6 +175,23 @@ p {
     margin-top: .5rem;
 }
 
+/* FOOTER =================================================== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-span {
+    font-size: .8rem;
+    color: var(--text);
+}
+
+.footer-name {
+    text-decoration: none;
+    color: var(--blue);
+}
+
 /* MODAL =================================================== */
 #modal {
     display: none;
